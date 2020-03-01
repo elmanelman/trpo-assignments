@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -9,11 +10,15 @@ namespace AbstractFunction
 {
     internal class Program
     {
+        private const string InputFilePath = "input.txt";
+
         /// <summary>
         ///     Точка входа в приложение.
         /// </summary>
         private static void Main()
         {
+            Trace.Listeners.Add(new ConsoleTraceListener());
+
             try
             {
                 var functions = ReadFunctionsFromFile();
@@ -29,11 +34,13 @@ namespace AbstractFunction
 
         private static IEnumerable<Function> ReadFunctionsFromFile()
         {
+            Trace.WriteLine($"reading functions from {InputFilePath}...");
+
             IFormatProvider doublesFormatter = new NumberFormatInfo {NumberDecimalSeparator = "."};
 
             var functionCount = 0;
 
-            using var sr = new StreamReader("input.txt", Encoding.Default);
+            using var sr = new StreamReader(InputFilePath, Encoding.Default);
             string line;
 
             if ((line = sr.ReadLine()) != null) functionCount = int.Parse(line);
@@ -70,6 +77,8 @@ namespace AbstractFunction
                             throw new FormatException("invalid function type: " + tokens[0]);
                     }
                 }
+
+            Trace.WriteLine("finished reading functions");
 
             return functions;
         }

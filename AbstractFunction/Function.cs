@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 
 namespace AbstractFunction
@@ -30,6 +31,8 @@ namespace AbstractFunction
 
         public override double Evaluate(double x)
         {
+            Trace.WriteLine($"evaluating monomial {this} at point {x}");
+
             return Scale * Math.Pow(x, Degree);
         }
 
@@ -66,6 +69,8 @@ namespace AbstractFunction
 
         public override double Evaluate(double x)
         {
+            Trace.WriteLine($"evaluating {GetType()} function {this} at point {x}");
+
             return Monomials.Sum(monomial => monomial.Evaluate(x));
         }
 
@@ -99,6 +104,8 @@ namespace AbstractFunction
 
         public override double Evaluate(double x)
         {
+            Trace.WriteLine($"evaluating {GetType()} function {this} at point {x}");
+
             return Monomials.Sum(monomial => monomial.Evaluate(x));
         }
 
@@ -132,6 +139,8 @@ namespace AbstractFunction
 
         public override double Evaluate(double x)
         {
+            Trace.WriteLine($"evaluating {GetType()} function {this} at point {x}");
+
             return Monomials.Sum(monomial => monomial.Evaluate(x));
         }
 
