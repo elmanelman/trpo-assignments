@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace AbstractFunction
 {
@@ -10,29 +13,41 @@ namespace AbstractFunction
     /// <remarks>
     ///     Поддерживает вычисление значения в точке.
     /// </remarks>
-    internal abstract class Function
+    public abstract class Function
     {
         /// <summary>
-        /// Вычисление значения функции в точке x.
+        ///     Вычисление значения функции в точке x.
         /// </summary>
         /// <param name="x">Точка x.</param>
         /// <returns>Значение функции в точке x.</returns>
         public abstract double Evaluate(double x);
 
         /// <summary>
-        /// Создание строкового представления функции.
+        ///     Создание строкового представления функции.
         /// </summary>
         /// <returns>Строка с представлением.</returns>
         public abstract override string ToString();
+
+        /// <summary>
+        ///     Сериализует объект в файл XML.
+        /// </summary>
+        /// <param name="path">Путь до файла для сериализации.</param>
+        public abstract void Serialize(string path);
     }
 
     /// <summary>
     ///     Одночлен от переменной x.
     /// </summary>
-    internal class Monomial : Function
+    public class Monomial : Function
     {
-        private double Scale { get; }
-        private uint Degree { get; }
+        public double Scale { get; }
+        public uint Degree { get; }
+
+        public Monomial()
+        {
+            Scale = 0.0;
+            Degree = 0;
+        }
 
         public Monomial(double scale, uint degree)
         {
@@ -56,17 +71,36 @@ namespace AbstractFunction
                 _ => $"({Scale} * x^{Degree})"
             };
         }
+
+        public override void Serialize(string path)
+        {
+            var s = new XmlSerializer(typeof(Monomial));
+            TextWriter writer = new StreamWriter(path, true);
+
+            s.Serialize(writer, this);
+
+            writer.Close();
+        }
     }
 
     /// <summary>
     ///     Линейная функция от переменной x.
     ///     Вид: a * x + b
     /// </summary>
-    internal class Line : Function
+    public class Line : Function
     {
         private const int MonomialCount = 2;
 
         public Monomial[] Monomials;
+
+        public Line()
+        {
+            Monomials = new[]
+            {
+                new Monomial(0.0, 0),
+                new Monomial(0.0, 1)
+            };
+        }
 
         public Line(params double[] coefs)
         {
@@ -89,6 +123,16 @@ namespace AbstractFunction
         {
             return string.Join(" + ", Monomials.Select(monomial => monomial.ToString()));
         }
+
+        public override void Serialize(string path)
+        {
+            var s = new XmlSerializer(typeof(Line));
+            TextWriter writer = new StreamWriter(path, true);
+
+            s.Serialize(writer, this);
+
+            writer.Close();
+        }
     }
 
     /// <summary>
@@ -97,11 +141,21 @@ namespace AbstractFunction
     /// <remarks>
     ///     Вид: a * x^2 + b * x + c
     /// </remarks>
-    internal class Quadratic : Function
+    public class Quadratic : Function
     {
         private const int MonomialCount = 3;
 
         public Monomial[] Monomials;
+
+        public Quadratic()
+        {
+            Monomials = new[]
+            {
+                new Monomial(0.0, 0),
+                new Monomial(0.0, 0),
+                new Monomial(0.0, 1)
+            };
+        }
 
         public Quadratic(params double[] coefs)
         {
@@ -124,6 +178,16 @@ namespace AbstractFunction
         {
             return string.Join(" + ", Monomials.Select(monomial => monomial.ToString()));
         }
+
+        public override void Serialize(string path)
+        {
+            var s = new XmlSerializer(typeof(Quadratic));
+            TextWriter writer = new StreamWriter(path, true);
+
+            s.Serialize(writer, this);
+
+            writer.Close();
+        }
     }
 
     /// <summary>
@@ -132,11 +196,22 @@ namespace AbstractFunction
     /// <remarks>
     ///     Вид: a * x^3 + b * x^2 + c * x + d
     /// </remarks>
-    internal class Cubic : Function
+    public class Cubic : Function
     {
         private const int MonomialCount = 4;
 
         public Monomial[] Monomials;
+
+        public Cubic()
+        {
+            Monomials = new[]
+            {
+                new Monomial(0.0, 0),
+                new Monomial(0.0, 0),
+                new Monomial(0.0, 0),
+                new Monomial(0.0, 1)
+            };
+        }
 
         public Cubic(params double[] coefs)
         {
@@ -158,6 +233,16 @@ namespace AbstractFunction
         public override string ToString()
         {
             return string.Join(" + ", Monomials.Select(monomial => monomial.ToString()));
+        }
+
+        public override void Serialize(string path)
+        {
+            var s = new XmlSerializer(typeof(Cubic));
+            TextWriter writer = new StreamWriter(path, true);
+
+            s.Serialize(writer, this);
+
+            writer.Close();
         }
     }
 }

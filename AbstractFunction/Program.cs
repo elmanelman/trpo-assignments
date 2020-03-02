@@ -16,6 +16,11 @@ namespace AbstractFunction
         private const string InputFilePath = "input.txt";
 
         /// <summary>
+        /// Выходной файл для сериализации в XML.
+        /// </summary>
+        private const string SerializerFilePath = "functions.xml";
+
+        /// <summary>
         ///     Точка входа в приложение.
         /// </summary>
         private static void Main()
@@ -25,13 +30,19 @@ namespace AbstractFunction
             try
             {
                 var functions = ReadFunctionsFromFile();
+                var enumerable = functions as Function[] ?? functions.ToArray();
 
-                foreach (var function in functions) Console.WriteLine(function.ToString());
+                Console.WriteLine("Значение функций в точке x:");
+                foreach (var function in enumerable) Console.WriteLine(function.ToString());
+
+                if (File.Exists(SerializerFilePath)) File.Delete(SerializerFilePath);
+                foreach (var function in enumerable) function.Serialize(SerializerFilePath);
             }
             catch (Exception e)
             {
                 // debug
                 Console.WriteLine(e.GetType() + " " + e.Message);
+                Console.WriteLine(e.StackTrace);
             }
         }
 
