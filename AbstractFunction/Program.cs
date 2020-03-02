@@ -10,6 +10,9 @@ namespace AbstractFunction
 {
     internal class Program
     {
+        /// <summary>
+        /// Входной файл по умолчанию.
+        /// </summary>
         private const string InputFilePath = "input.txt";
 
         /// <summary>
@@ -32,6 +35,10 @@ namespace AbstractFunction
             }
         }
 
+        /// <summary>
+        /// Читает набор функций из текстового файла (по умолчанию input.txt).
+        /// </summary>
+        /// <returns>Коллекция функций</returns>
         private static IEnumerable<Function> ReadFunctionsFromFile()
         {
             Trace.WriteLine($"reading functions from {InputFilePath}...");

@@ -12,7 +12,18 @@ namespace AbstractFunction
     /// </remarks>
     internal abstract class Function
     {
+        /// <summary>
+        /// Вычисление значения функции в точке x.
+        /// </summary>
+        /// <param name="x">Точка x.</param>
+        /// <returns>Значение функции в точке x.</returns>
         public abstract double Evaluate(double x);
+
+        /// <summary>
+        /// Создание строкового представления функции.
+        /// </summary>
+        /// <returns>Строка с представлением.</returns>
+        public abstract override string ToString();
     }
 
     /// <summary>
