@@ -49,6 +49,7 @@ namespace AbstractFunction
         /// <summary>
         /// Читает набор функций из текстового файла (по умолчанию input.txt).
         /// </summary>
+        /// <remarks>Формат данных о функции: тип_функции коэффициент_0 коэффициент_1 ... коэффициент_N </remarks>
         /// <returns>Коллекция функций</returns>
         private static IEnumerable<Function> ReadFunctionsFromFile()
         {
