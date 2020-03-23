@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="AbstractFunction.Cubic">
+    <Position X="10.5" Y="2.75" Width="2" />
+    <AssociationLine Name="Monomials" Type="AbstractFunction.Monomial" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="5.011" />
+        <Point X="11.5" Y="6.328" />
+        <Point X="2.75" Y="6.328" />
+        <Point X="2.75" Y="5.204" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAgAAACAAAAAAAAAAAAAACCA=</HashCode>
+      <FileName>Function.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Monomials" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AbstractFunction.Function">
+    <Position X="6.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAgAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Function.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFunction.Monomial">
+    <Position X="2.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAgAQACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Function.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFunction.Program">
+    <Position X="13.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAQAAAAAAABAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFunction.Quadratic">
+    <Position X="7.75" Y="2.75" Width="2.25" />
+    <AssociationLine Name="Monomials" Type="AbstractFunction.Monomial" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.938" Y="5.011" />
+        <Point X="8.938" Y="5.949" />
+        <Point X="3.625" Y="5.949" />
+        <Point X="3.625" Y="5.204" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAgAAACAAAAAAAAAAAAAACCA=</HashCode>
+      <FileName>Function.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Monomials" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AbstractFunction.Line">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <AssociationLine Name="Monomials" Type="AbstractFunction.Monomial" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="5.011" />
+        <Point X="6" Y="5.579" />
+        <Point X="4.5" Y="5.579" />
+        <Point X="4.5" Y="5.204" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAgAAACAAAAAAAAAAAAAACCA=</HashCode>
+      <FileName>Function.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Monomials" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
