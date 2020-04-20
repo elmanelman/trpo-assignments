@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFunction", "AbstractFunction\AbstractFunction.csproj", "{F1CFA4AA-ED9A-4FF5-A063-71C2042F6D02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractEditorOptions", "AbstractEditorOptions\AbstractEditorOptions.csproj", "{B02AE71B-8E3B-493D-B659-9A5AB633BACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractEditorOptions", "AbstractEditorOptions\AbstractEditorOptions.csproj", "{B02AE71B-8E3B-493D-B659-9A5AB633BACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextEditorCommands", "TextEditorCommands\TextEditorCommands.csproj", "{C12B6271-89EF-4DD7-99DB-3EF139723DD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B02AE71B-8E3B-493D-B659-9A5AB633BACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B02AE71B-8E3B-493D-B659-9A5AB633BACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B02AE71B-8E3B-493D-B659-9A5AB633BACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C12B6271-89EF-4DD7-99DB-3EF139723DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12B6271-89EF-4DD7-99DB-3EF139723DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12B6271-89EF-4DD7-99DB-3EF139723DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12B6271-89EF-4DD7-99DB-3EF139723DD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
