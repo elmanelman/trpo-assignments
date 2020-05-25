@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractEditorOptions", "Ab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextEditorCommands", "TextEditorCommands\TextEditorCommands.csproj", "{C12B6271-89EF-4DD7-99DB-3EF139723DD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{131566A1-59F3-4F68-AF47-1D60BC38983D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C12B6271-89EF-4DD7-99DB-3EF139723DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C12B6271-89EF-4DD7-99DB-3EF139723DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C12B6271-89EF-4DD7-99DB-3EF139723DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131566A1-59F3-4F68-AF47-1D60BC38983D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131566A1-59F3-4F68-AF47-1D60BC38983D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131566A1-59F3-4F68-AF47-1D60BC38983D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131566A1-59F3-4F68-AF47-1D60BC38983D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
