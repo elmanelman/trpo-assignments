@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFunction", "Abstrac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractEditorOptions", "AbstractEditorOptions\AbstractEditorOptions.csproj", "{B02AE71B-8E3B-493D-B659-9A5AB633BACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextEditorCommands", "TextEditorCommands\TextEditorCommands.csproj", "{C12B6271-89EF-4DD7-99DB-3EF139723DD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextEditorCommands", "TextEditorCommands\TextEditorCommands.csproj", "{C12B6271-89EF-4DD7-99DB-3EF139723DD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{131566A1-59F3-4F68-AF47-1D60BC38983D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorPicker", "..\..\..\Desktop\Labs_course_c_sharp-master\lab 7\Palette\ColorPicker.csproj", "{B3C04037-799E-49D1-9EE2-03EC6877EB11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Button", "..\..\..\Desktop\Labs_course_c_sharp-master\lab 7\Button\Button.csproj", "{FDF6A8C8-4925-4403-8C8A-EEAB9F49510E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{131566A1-59F3-4F68-AF47-1D60BC38983D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{131566A1-59F3-4F68-AF47-1D60BC38983D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{131566A1-59F3-4F68-AF47-1D60BC38983D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C04037-799E-49D1-9EE2-03EC6877EB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C04037-799E-49D1-9EE2-03EC6877EB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C04037-799E-49D1-9EE2-03EC6877EB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C04037-799E-49D1-9EE2-03EC6877EB11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDF6A8C8-4925-4403-8C8A-EEAB9F49510E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF6A8C8-4925-4403-8C8A-EEAB9F49510E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF6A8C8-4925-4403-8C8A-EEAB9F49510E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF6A8C8-4925-4403-8C8A-EEAB9F49510E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
